@@ -5,7 +5,7 @@ function UsersList(props) {
 
     let usersList = props.usersList;
     let usersLiElements = usersList.map(user =>
-    <li key={user.id}>{user.name} <span>X</span></li>);
+    <li key={user.id}>{user.name} <span onClick={() => props.removeUserMethod(user.id)}>X</span></li>);
 
     return(
         <ul className="the-list">
