@@ -4,9 +4,8 @@ import './UsersList.css';
 function UsersList(props) {
 
     let usersList = props.usersList;
-    let usersLiElements = usersList.map((user) =>
-    <li>{user} <span>X</span></li>);
-    console.log(usersList);
+    let usersLiElements = usersList.map(user =>
+    <li key={user.id}>{user.name} <span>X</span></li>);
 
     return(
         <ul className="the-list">
